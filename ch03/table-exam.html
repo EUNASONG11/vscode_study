@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table exam</title>
+    <style>
+        table { border: 1px solid #ccc; border-collapse: collapse; caption-side: top; text-align: center;}
+        table th, td { border: 1px solid #ccc; padding: 5px;}
+        table caption { padding: 10px;}
+        .row-coler { background-color: #59a763; }
+        .col-coler { background-color: #ffddb1;}
+    </style>
+</head>
+<body>
+    <h2 style="margin: 0px;">테이블 연습</h2>
+    <table>
+        <thead>
+            <caption style="font-size: 20px;font-weight: bold;">우도입도 총괄요금표</caption>
+            
+            <tr>
+                <th rowspan="2" class="row-coler">구분</th>
+                <th colspan="3" class="col-coler">우도입도 총괄요금표</th>
+            </tr>
+
+            <tr>
+                <th>선박요금</th> <!-- 가로로 합치고 싶다면 colspan="2" -->
+                <th>도립공원입장료</th>
+                <th>터미널이용료</th>
+            </tr>
+        </thead>
+            
+        <tbody>
+            <tr>
+                <th class="row-coler">성인</th>
+                <td>2,000원</td>
+                <td>1,000원</td>
+                <td>500원</td>
+            </tr>
+
+            <tr>
+                <th class="row-coler">중학생이상</th>
+                <td>2,000원</td>
+                <td>800원</td>
+                <td>300원</td>
+            </tr>
+
+            <tr>
+                <th class="row-coler">초등학생</th>
+                <td>700원</td>
+                <td>500원</td>
+                <td>300원</td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="font-size: 12px;">*이륜차(오토바이,자전거) 및 화물차량은 별도 문의</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
