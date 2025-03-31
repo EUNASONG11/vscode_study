@@ -30,6 +30,7 @@
 
         console.log('=============');
 
+        //콜백 지옥
         let a2 = 0;
         setTimeout(function () {
             a2 = 100;
@@ -38,8 +39,8 @@
                 b2 = a2 * 2;
                 let c2 = 1;
                 setTimeout(function () {
-                c2 = b2 * 5;
-                console.log(`c2: ${c2}`);
+                    c2 = b2 * 5;
+                    console.log(`c2: ${c2}`);
                 }, 777);
             }, 888);
         }, 999);
