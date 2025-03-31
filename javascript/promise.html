@@ -9,7 +9,7 @@
     <script>
         //인자 1개: 함수 주소값
         const p1 = new Promise(function (resolve, reject) {
-            const isSuccess = true;
+            const isSuccess = false;
             setTimeout( function() {
                 if(isSuccess) {
                     resolve(100);
@@ -24,6 +24,19 @@
         }).catch(function(err) {
             console.log(`err: ${err}`);
           });
+        
+        console.log('=========');
+
+        function cb(resolve, reject) {
+            resolve(999);
+        }
+
+        const p2 = new Promise(cb);
+        p2.then(function(data2) {
+            console.log(`data2: ${data2}`);
+        }). catch(function(err2){
+            console.log(`err2: ${err2}`);
+        });
     </script>
 </body>
 </html>
